@@ -1,0 +1,57 @@
+/**
+ * Gruvbox — official Dripnex theme.
+ * Token layer only. Same contract as a community theme repo.
+ * Must be CommonJS.
+ */
+
+const TOKENS = {
+  '--bg-base': '#282828',
+  '--bg-surface': '#1d2021',
+  '--bg-elevated': '#3c3836',
+  '--bg-inset': '#1d2021',
+  '--bg-hover': 'rgba(235, 219, 178, 0.07)',
+  '--bg-active': 'rgba(235, 219, 178, 0.12)',
+  '--text-primary': '#ebdbb2',
+  '--text-secondary': '#d5c4a1',
+  '--text-muted': '#a89984',
+  '--text-faint': '#7c6f64',
+  '--border': 'rgba(235, 219, 178, 0.12)',
+  '--border-subtle': 'rgba(235, 219, 178, 0.06)',
+  '--border-strong': 'rgba(235, 219, 178, 0.2)',
+  '--accent': '#fe8019',
+  '--accent-hover': '#ff9a3c',
+  '--accent-muted': 'rgba(254, 128, 25, 0.18)',
+  '--accent-subtle': 'rgba(254, 128, 25, 0.1)',
+  '--glass-bg': 'rgba(40, 40, 40, 0.92)',
+  '--glass-border': 'rgba(235, 219, 178, 0.1)',
+  '--glass-bg-menu': 'rgba(60, 56, 54, 0.96)',
+  '--glass-border-menu': 'rgba(235, 219, 178, 0.1)',
+  '--status-active': '#fe8019',
+  '--status-on-hold': '#fabd2f',
+  '--status-completed': '#b8bb26',
+  '--status-dropped': '#fb4934',
+};
+
+module.exports = {
+  id: 'theme-gruvbox',
+  name: 'Gruvbox',
+  version: '0.1.0',
+  description: 'Retro groove. The other Vim default.',
+
+  activate(context) {
+    const remove = context.registerTheme({
+      id: 'dripnex-gruvbox',
+      name: 'Gruvbox',
+      description: 'Retro groove. The other Vim default.',
+      author: 'Dripnex',
+      colorScheme: 'dark',
+      tokens: TOKENS,
+    });
+
+    return {
+      dispose() {
+        remove();
+      },
+    };
+  },
+};

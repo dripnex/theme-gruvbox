@@ -1,0 +1,7 @@
+{
+  "id": "theme-gruvbox",
+  "name": "Gruvbox",
+  "version": "0.1.0",
+  "description": "Retro groove. The other Vim default.",
+  "main": "dist/index.js"
+}
