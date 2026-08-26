@@ -35,7 +35,7 @@ const TOKENS = {
 module.exports = {
   id: 'theme-gruvbox',
   name: 'Gruvbox',
-  version: '0.1.0',
+  version: '0.1.1',
   description: 'Retro groove. The other Vim default.',
 
   activate(context) {
